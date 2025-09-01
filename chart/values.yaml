@@ -1,0 +1,11 @@
+app:
+  image:
+    tag: "1.0.0"
+  environment:
+    POSTGRES_DB: tutorial-dev
+    POSTGRES_USER: vihnie
+    POSTGRES_PASSWORD: password
+
+postgres:
+  image: postgres:13-alpine
+  volumeSize: 2Gi
