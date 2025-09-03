@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: test-app-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
-    - port: 8000
+    - port: 80
       targetPort: 8000
-      nodePort: 30100
+      name: plaintext
   selector:
     app: test-app
