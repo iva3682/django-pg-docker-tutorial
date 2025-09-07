@@ -1,6 +1,6 @@
 app:
   image:
-    tag: "1.4"
+    tag: "1.5"
   environment:
     POSTGRES_DB: tutorial-dev
     POSTGRES_USER: vihnie
