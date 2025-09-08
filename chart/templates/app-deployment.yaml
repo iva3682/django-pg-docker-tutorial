@@ -24,7 +24,7 @@ spec:
         - containerPort: 8000
           protocol: TCP
         env:
-        - name: DJANGO_ALLOWED_HOSTS 
+        - name: ALLOWED_HOSTS 
           value: "*"
         - name: DB_HOST
           value: postgres
