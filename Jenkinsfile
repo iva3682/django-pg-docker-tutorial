@@ -5,7 +5,6 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/iva3682/django-pg-docker-tutorial.git'
                 script {
                     gitTag=sh(returnStdout: true, script: "git tag --contains | head -1").trim()
                 }
