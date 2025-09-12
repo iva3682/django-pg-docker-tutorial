@@ -12,12 +12,19 @@ spec:
       labels:
         app: postgres
     spec:
+      volumes:
+        - name: postgres-storage
+          persistentVolumeClaim:
+            claimName: postgres-pvc
       containers:
         - name: postgres
           image: {{ .Values.postgres.image }}
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5432
+          volumeMounts:
+            - name: postgres-storage
+              mountPath: /var/lib/postgresql/data
           env:
             - name: POSTGRES_PASSWORD
               valueFrom:
